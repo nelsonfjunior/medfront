@@ -1,0 +1,20 @@
+<app-layout-base title="Consultar medicamentos">
+  <div class="card">
+    <p-table [value]="medicamentos" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Medicamento</th>
+                <th>Dosagem</th>
+                <th>Descrição</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-medicamento>
+            <tr>
+                <td>{{ medicamento.nomeRemedio }}</td>
+                <td>{{ medicamento.dosagem }}</td>
+                <td>{{ medicamento.descricao }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+</app-layout-base>
